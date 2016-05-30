@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FooService.ConsoleClient
 {
@@ -13,7 +9,8 @@ namespace FooService.ConsoleClient
             var fooClient = new Foo.FooServiceClient();
             try
             {
-                fooClient.ServiceAction();
+                var result = fooClient.ServiceAction();
+                Console.WriteLine(result);
             }
             catch (Exception e)
             {
@@ -24,7 +21,8 @@ namespace FooService.ConsoleClient
             var barClient = new Bar.BarServiceClient();
             try
             {
-                barClient.ServiceAction();
+                var result = barClient.ServiceAction();
+                Console.WriteLine(result);
             }
             catch (Exception e)
             {
